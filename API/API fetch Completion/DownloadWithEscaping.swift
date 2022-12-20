@@ -6,6 +6,27 @@
 //
 
 import SwiftUI
+struct DownloadWithEscaping: View {
+    
+    @StateObject var vm = DownloadWithEscapingViewModel()
+    
+    var body: some View {
+        VStack {
+            Text("Downloading Using Escaping Closure")
+            List {
+                ForEach(vm.posts, content: { post in
+                    VStack(alignment: .leading) {
+                        Text(post.title)
+                            .font(.headline)
+                        Text(post.body)
+                            .foregroundColor(.gray)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                })
+            }
+        }
+    }
+}
 
 
 class DownloadWithEscapingViewModel: ObservableObject {
@@ -51,24 +72,7 @@ class DownloadWithEscapingViewModel: ObservableObject {
     
 }
 
-struct DownloadWithEscaping: View {
-    
-    @StateObject var vm = DownloadWithEscapingViewModel()
-    
-    var body: some View {
-        List {
-            ForEach(vm.posts, content: { post in
-                VStack(alignment: .leading) {
-                    Text(post.title)
-                        .font(.headline)
-                    Text(post.body)
-                        .foregroundColor(.gray)
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-            })
-        }
-    }
-}
+
 
 struct DownloadWithEscaping_Previews: PreviewProvider {
     static var previews: some View {

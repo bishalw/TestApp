@@ -11,16 +11,19 @@ import Combine
 struct DownloadWithCombine: View {
     @StateObject var vm = DownloadingWithCombineViewModel()
     var body: some View {
-        List {
-            ForEach(vm.posts, content: { post in
-                VStack(alignment: .leading) {
-                    Text(post.title)
-                        .font(.headline)
-                    Text(post.body)
-                        .foregroundColor(.gray)
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-            })
+        VStack {
+            Text("Download Using Combine")
+            List {
+                ForEach(vm.posts, content: { post in
+                    VStack(alignment: .leading) {
+                        Text(post.title)
+                            .font(.headline)
+                        Text(post.body)
+                            .foregroundColor(.gray)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                })
+            }
         }
     }
 }

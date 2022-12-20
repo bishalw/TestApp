@@ -14,10 +14,11 @@ struct TestAppApp: App {
 //                 SObjects()
 //                 ObObjects()
 //                 BackgroundThread()
-                 WeakSelf()
+//                 WeakSelf()
 //                 Escaping()
 //                 DownloadWithEscaping()
-//                   DownloadWithCombine()
+//                 DownloadWithCombine()
+                   DownloadingWithFuture()
                 
                 
         }

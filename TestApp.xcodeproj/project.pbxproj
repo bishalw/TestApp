@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		580C48FF29507D67006E5723 /* DownloadWithCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C48FE29507D67006E5723 /* DownloadWithCombine.swift */; };
 		580C490229508045006E5723 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C490129508045006E5723 /* PostModel.swift */; };
+		580C4905295174DF006E5723 /* DownloadingWithFuture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C4904295174DF006E5723 /* DownloadingWithFuture.swift */; };
 		5823BB2F28F8C43C00537FA6 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5823BB2E28F8C43C00537FA6 /* Photos.swift */; };
 		5823BB3228F8CF2C00537FA6 /* EmojiKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5823BB3128F8CF2C00537FA6 /* EmojiKeyboard.swift */; };
 		5823BB3428F8EAFB00537FA6 /* ConcurrencySwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5823BB3328F8EAFB00537FA6 /* ConcurrencySwift.swift */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		580C48FE29507D67006E5723 /* DownloadWithCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadWithCombine.swift; sourceTree = "<group>"; };
 		580C490129508045006E5723 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		580C4904295174DF006E5723 /* DownloadingWithFuture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadingWithFuture.swift; sourceTree = "<group>"; };
 		5823BB2E28F8C43C00537FA6 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		5823BB3028F8C78900537FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5823BB3128F8CF2C00537FA6 /* EmojiKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiKeyboard.swift; sourceTree = "<group>"; };
@@ -109,7 +111,6 @@
 		580C48FD29507A2B006E5723 /* API fetch Concurrency Async */ = {
 			isa = PBXGroup;
 			children = (
-				5823BB3528F8FAA400537FA6 /* DownloadImageAsyncImageLoader.swift */,
 			);
 			path = "API fetch Concurrency Async";
 			sourceTree = "<group>";
@@ -118,11 +119,20 @@
 			isa = PBXGroup;
 			children = (
 				580C490129508045006E5723 /* PostModel.swift */,
+				580C49032951749F006E5723 /* API fetch Combine Future */,
 				587A50C3290769ED00981ED9 /* API fetch Completion */,
 				580C48FC295079F8006E5723 /* API fetch Combine AnyPublisher */,
 				580C48FD29507A2B006E5723 /* API fetch Concurrency Async */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		580C49032951749F006E5723 /* API fetch Combine Future */ = {
+			isa = PBXGroup;
+			children = (
+				580C4904295174DF006E5723 /* DownloadingWithFuture.swift */,
+			);
+			path = "API fetch Combine Future";
 			sourceTree = "<group>";
 		};
 		5823BB3828F9FB9000537FA6 /* Observed Object Vs State Object */ = {
@@ -146,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				587A50C629077C4100981ED9 /* DownloadWithEscaping.swift */,
+				5823BB3528F8FAA400537FA6 /* DownloadImageAsyncImageLoader.swift */,
 			);
 			path = "API fetch Completion";
 			sourceTree = "<group>";
@@ -357,6 +368,7 @@
 				587A50CA290A7FD200981ED9 /* AppTest.swift in Sources */,
 				580C490229508045006E5723 /* PostModel.swift in Sources */,
 				580C48FF29507D67006E5723 /* DownloadWithCombine.swift in Sources */,
+				580C4905295174DF006E5723 /* DownloadingWithFuture.swift in Sources */,
 				5823BB2F28F8C43C00537FA6 /* Photos.swift in Sources */,
 				5823BB3428F8EAFB00537FA6 /* ConcurrencySwift.swift in Sources */,
 				58FB341328BD47FE00B9FFF9 /* TestingStateView.swift in Sources */,
