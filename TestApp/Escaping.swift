@@ -13,7 +13,6 @@ class EscapingViewModel: ObservableObject {
     
     func getData() {
         
-        
         downloadData5 { [weak self] (returnedResult) in
             self?.text = returnedResult.data
         }
