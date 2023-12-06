@@ -28,19 +28,20 @@ struct DownloadWithEscaping: View {
     }
 }
 
-
 class DownloadWithEscapingViewModel: ObservableObject {
     
     @Published var posts: [PostModel] = []
+    typealias handler =  (_ data: Data?) -> ()
     
     init(){
         getPosts()
     }
     
     func getPosts(){
-        
+
         guard let url = URL(string:"https://jsonplaceholder.typicode.com/posts") else { return }
         // if url = URL then downloadData
+        
         downloadData(fromURL: url) { (returnedData) in
             if let data = returnedData {
                 guard let newPosts = try? JSONDecoder().decode([PostModel].self, from: data) else { return }
@@ -52,9 +53,9 @@ class DownloadWithEscapingViewModel: ObservableObject {
                 print("No data returned")
             }
         }
+        
     }
-    
-    func downloadData(fromURL url: URL, completionHandler: @escaping (_ data: Data?) -> ()){
+    func downloadData(fromURL url: URL, completionHandler: @escaping (_ data: Data?) -> ()) {
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
                 let data = data,
@@ -65,9 +66,23 @@ class DownloadWithEscapingViewModel: ObservableObject {
                 completionHandler(nil)
                 return
             }
-                      
-           completionHandler(data)
+            completionHandler(data)
         }.resume()
+    }
+    
+    func downloadData2(fromURL url: URL) async throws -> Data {
+        let (data, response ) = try await URLSession.shared.data(from: url)
+        
+        guard let httpResponse = response as? HTTPURLResponse,
+              (200..<300).contains(httpResponse.statusCode) else {
+            throw NetworkError.badStatusCode
+        }
+        
+        return data
+    }
+    
+    enum NetworkError: Error {
+        case badStatusCode
     }
     
 }

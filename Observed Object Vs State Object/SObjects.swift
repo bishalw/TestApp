@@ -21,11 +21,12 @@ struct User {
 }
 struct UserView: View {
 
-    @StateObject var userViewModel = UserViewModel(user: User(name: "Sean"))
-
+//    @StateObject var userViewModel : UserViewModel
+    @ObservedObject var userViewModel: UserViewModel
     var body: some View {
         VStack{
             Text("UserView State Object")
+            Text("Child View")
                 .padding()
             HStack{
                 Text("Press -> ")
@@ -43,9 +44,10 @@ struct UserView: View {
 
 struct SObjects: View {
     @State var count = 0
+    @StateObject var userViewModel = UserViewModel(user: User(name: "sean")) // parent is holding the reference even though its a  User view is a ObservedObject
     var body: some View {
         VStack {
-            UserView()
+            UserView(userViewModel: userViewModel)
                 .padding()
                 .border(.green)
             VStack{

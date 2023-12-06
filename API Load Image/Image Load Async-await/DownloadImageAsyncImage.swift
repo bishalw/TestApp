@@ -7,10 +7,11 @@
 
 import SwiftUI
 import Combine
+import Observation
 
 struct DownloadImageAsyncImage: View {
     
-    @StateObject private var viewModel = DownloadImageAsyncImageViewModel()
+    @StateObject var viewModel = DownloadImageAsyncImageViewModel()
     
     var body: some View {
         VStack{
@@ -25,9 +26,9 @@ struct DownloadImageAsyncImage: View {
         
     }
 }
+
 class DownloadImageAsyncImageViewModel: ObservableObject {
     @Published var image: UIImage? = nil
-    var cancellables = Set<AnyCancellable>()
     let url = URL(string: "https://picsum.photos/200")!
     
     init(){

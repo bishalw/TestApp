@@ -23,6 +23,8 @@ struct DownloadImageEscaping: View {
     }
 }
 
+
+
 class DownloadImageEscapingViewModel: ObservableObject {
     @Published var image: UIImage? = nil
     let url = URL(string: "https://picsum.photos/200")!
@@ -30,6 +32,7 @@ class DownloadImageEscapingViewModel: ObservableObject {
     init(){
       fetchImage()
     }
+
     func fetchImage(){
         downloadWithEscaping { [weak self] image, error in
             if let image = image {
@@ -39,11 +42,11 @@ class DownloadImageEscapingViewModel: ObservableObject {
                
             }
         }
+        
     }
     func downloadWithEscaping(completionHandler: @escaping (_ image: UIImage?, _ error: Error?) -> ()){
         let request = URLRequest(url: url)
          let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
-
             guard
                 let data = data,
                 let image = UIImage(data: data),

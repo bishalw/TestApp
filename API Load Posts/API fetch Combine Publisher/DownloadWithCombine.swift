@@ -51,9 +51,9 @@ class DownloadingWithCombineViewModel: ObservableObject {
     }
 
     func downloadData(url: URL) -> AnyPublisher<Data, Error> {
-            URLSession.shared.dataTaskPublisher(for: url)
-                
-                .tryMap { data, response -> Data in
+            URLSession
+            .shared.dataTaskPublisher(for: url)
+            .tryMap { data, response -> Data in
                     // check the status code of the response
                     guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
                         throw URLError(.badServerResponse)
