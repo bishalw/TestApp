@@ -37,7 +37,7 @@ class DownloadWithAsyncAwaitViewModel: ObservableObject {
     func getPosts() async throws   {
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
         let data = try await downloadData(fromURL: url)
-        let stockData = try JSONDecoder().decode([PostModel].self, from: data)
+        let posts = try JSONDecoder().decode([PostModel].self, from: data)
     }
     
     func downloadData(fromURL url: URL) async throws -> Data {

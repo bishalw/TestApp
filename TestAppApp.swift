@@ -9,8 +9,8 @@ import SwiftUI
 
 @main
 struct TestAppApp: App {
+    
    
-
     var body: some Scene {
         WindowGroup {
                 // State vs Observed Objects
@@ -33,8 +33,9 @@ struct TestAppApp: App {
 //                   CombineSearch()
 //                   FetchOnSearch()
                 // Property Wrapper
-                    
-                
+//                   VarPropertyWrapperViewWithKey()
+//                   VarPropertyWrapperView()
+           
         }
     }
 }

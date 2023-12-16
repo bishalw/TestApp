@@ -17,7 +17,8 @@
 		5823BB3428F8EAFB00537FA6 /* ConcurrencySwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5823BB3328F8EAFB00537FA6 /* ConcurrencySwift.swift */; };
 		5823BB3628F8FAA400537FA6 /* DownloadImageAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5823BB3528F8FAA400537FA6 /* DownloadImageAsyncImage.swift */; };
 		5823BB3A28F9FBB800537FA6 /* SObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5823BB3928F9FBB800537FA6 /* SObjects.swift */; };
-		5869D9DC2B204A75002ADAE0 /* VarPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5869D9DB2B204A75002ADAE0 /* VarPropertyWrapper.swift */; };
+		58464FF62B21843300C1BA7F /* VarPropertyWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58464FF52B21843300C1BA7F /* VarPropertyWrapperView.swift */; };
+		5869D9DC2B204A75002ADAE0 /* VarPropertyWrapperViewWithKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5869D9DB2B204A75002ADAE0 /* VarPropertyWrapperViewWithKey.swift */; };
 		587A50BF28FF32D900981ED9 /* BackgroundThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587A50BE28FF32D900981ED9 /* BackgroundThread.swift */; };
 		587A50C22907640800981ED9 /* WeakSelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587A50C12907640800981ED9 /* WeakSelf.swift */; };
 		587A50C529076A7600981ED9 /* Escaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587A50C429076A7600981ED9 /* Escaping.swift */; };
@@ -62,7 +63,8 @@
 		5823BB3328F8EAFB00537FA6 /* ConcurrencySwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencySwift.swift; sourceTree = "<group>"; };
 		5823BB3528F8FAA400537FA6 /* DownloadImageAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageAsyncImage.swift; sourceTree = "<group>"; };
 		5823BB3928F9FBB800537FA6 /* SObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SObjects.swift; sourceTree = "<group>"; };
-		5869D9DB2B204A75002ADAE0 /* VarPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarPropertyWrapper.swift; sourceTree = "<group>"; };
+		58464FF52B21843300C1BA7F /* VarPropertyWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarPropertyWrapperView.swift; sourceTree = "<group>"; };
+		5869D9DB2B204A75002ADAE0 /* VarPropertyWrapperViewWithKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarPropertyWrapperViewWithKey.swift; sourceTree = "<group>"; };
 		587A50BE28FF32D900981ED9 /* BackgroundThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundThread.swift; sourceTree = "<group>"; };
 		587A50C12907640800981ED9 /* WeakSelf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakSelf.swift; sourceTree = "<group>"; };
 		587A50C429076A7600981ED9 /* Escaping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Escaping.swift; sourceTree = "<group>"; };
@@ -196,7 +198,8 @@
 		5869D9DA2B204A1C002ADAE0 /* Property Wrapper */ = {
 			isa = PBXGroup;
 			children = (
-				5869D9DB2B204A75002ADAE0 /* VarPropertyWrapper.swift */,
+				5869D9DB2B204A75002ADAE0 /* VarPropertyWrapperViewWithKey.swift */,
+				58464FF52B21843300C1BA7F /* VarPropertyWrapperView.swift */,
 			);
 			path = "Property Wrapper";
 			sourceTree = "<group>";
@@ -432,9 +435,10 @@
 				587A50C729077C4100981ED9 /* DownloadWithEscaping.swift in Sources */,
 				587A50C529076A7600981ED9 /* Escaping.swift in Sources */,
 				58A09DC129543348008287DB /* CombineSearch.swift in Sources */,
-				5869D9DC2B204A75002ADAE0 /* VarPropertyWrapper.swift in Sources */,
+				5869D9DC2B204A75002ADAE0 /* VarPropertyWrapperViewWithKey.swift in Sources */,
 				5823BB3A28F9FBB800537FA6 /* SObjects.swift in Sources */,
 				5893901C2B1822A50056FC57 /* DownloadWithAsyncAwait.swift in Sources */,
+				58464FF62B21843300C1BA7F /* VarPropertyWrapperView.swift in Sources */,
 				580C490F295294EB006E5723 /* DownloadImageCombine.swift in Sources */,
 				58E60F682991F7E0001CE053 /* NetworkingManager.swift in Sources */,
 				58FB341128BD47FE00B9FFF9 /* TestAppApp.swift in Sources */,

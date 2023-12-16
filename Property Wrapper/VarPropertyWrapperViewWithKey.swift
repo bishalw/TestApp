@@ -16,7 +16,7 @@ extension FileManager {
 }
 
 @propertyWrapper
-public struct Save: DynamicProperty {
+public struct KeySave: DynamicProperty {
     @State private var title: String = ""
     let key: String?
     
@@ -61,8 +61,8 @@ public struct Save: DynamicProperty {
 struct VarPropertyWrapperViewWithKey: View {
     
   
-    @Save(key:"test") private var title3: String
-    
+    @KeySave(key:"test") private var title3: String
+
     
     var body: some View {
         VStack(spacing: 40) {
@@ -80,6 +80,6 @@ struct VarPropertyWrapperViewWithKey: View {
         
 }
 
-//#Preview {
-//    VarPropertyWrapperView(title: <#Save#>, title2: <#Save#>)
-//}
+#Preview {
+    VarPropertyWrapperView()
+}
